@@ -7,6 +7,7 @@ from PIL import Image, ImageTk
 
 
 ##Parameters
+artAssetDir = 'images'
 canvasW = 500
 canvasH = 500 #canvas dimensions for the tree figure
 trunkLength = canvasH/3 #scale the tree trunk to the canvas dimensions
@@ -140,7 +141,7 @@ can.pack(side = tk.TOP)
     #todo: settle on pack() vs grid() for element layout
     #pack is simpler if we only need a few elements,
     #but grid affords more control
-img = Image.open('TreeBranch-1.gif')
+img = Image.open(artAssetDir+'\TreeBranch-1.gif')
 basewidth = 200
 wpercent = (basewidth/float(img.size[0]))
 hsize = int((float(img.size[1])*float(wpercent)))
