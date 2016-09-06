@@ -1,8 +1,8 @@
 ##Imports
 import math #used for some trig calls on branch angles, lengths
-
+import random
 #Parameters
-branchScaleFactor = 0.6
+#branchScaleFactor = 0.6
     #ratio of child to parent branch lengths
 
 class brTree:
@@ -71,6 +71,7 @@ def addChildren(treeModelDict,density,depthMax,depthCur):
         #base case, maximum depth reached in current iteration
         return treeModelDict
     for i in range(density):
+        branchScaleFactor = random.uniform(0.4, 0.8)
         parentLength = treeModelDict['length']
         parentOriginX =treeModelDict['origin'][0]
         parentOriginY = treeModelDict['origin'][1]
