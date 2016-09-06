@@ -2,6 +2,7 @@
 import tkinter as tk #use this for all the GUI elements
 from brTree import * #use this for the tree model handling
 from msgQuest import * #customizable button-box prompts
+from PIL import Image, ImageTk
 
 ##Parameters
 canvasW = 500
@@ -137,6 +138,14 @@ can.pack(side = tk.TOP)
     #todo: settle on pack() vs grid() for element layout
     #pack is simpler if we only need a few elements,
     #but grid affords more control
+img = Image.open('TreeBranch-1.gif')
+img = img.convert('RGBA')
+rot = img.rotate(10)
+fff = Image.new('RGBA',rot.size,0x000000FF)
+out = Image.composite(rot,fff,rot)
+tkimg=ImageTk.PhotoImage(out)
+can.create_image(100,200, image=tkimg)
+
 
 ##Put it all together
 root.mainloop()
