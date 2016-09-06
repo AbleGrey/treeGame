@@ -1,0 +1,14 @@
+window
+	menus
+	buttons
+	picture
+		modifiable by menus/buttons
+Python
+	tree parameters
+
+Set of radio buttons and text fields to set player inputs
+draw tree from image files instead of lines
+add parameters to tree elements
+weather model?
+update tree model for tree species
+update tree model for non-uniform structure
