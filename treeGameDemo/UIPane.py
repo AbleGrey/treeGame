@@ -21,7 +21,8 @@ class treeUI:
         self.root = tk.Tk()
 
         fScale = self.fScale = 50
-
+        img = Image.open('images\TreeBranch-2.gif')
+        img2 = ImageTk.PhotoImage(img)
     
 
         #self.root = tk.Tk()
@@ -72,7 +73,7 @@ class treeUI:
         checkSet2 = tk.Checkbutton(master = self.allocations,text = 'second',variable = self.foo2)
         checkSet1.pack(anchor = tk.W,side = tk.TOP)
         checkSet2.pack(anchor = tk.W,side = tk.TOP)
-        radioButts = [('All','All'),('Some','Some'),('None','None')]
+        radioButts = [('All','valueAll'),('Some','valueSome'),('None','valueNone')]
         self.rad = tk.StringVar(master = self.root)
         self.rad.set("Not Set")
         for rText,rMode in radioButts:
@@ -82,8 +83,9 @@ class treeUI:
         ##Commit Frame Contents
         #img = Image.open(imageFile)
         #img2 = ImageTk.PhotoImage(img)
-        #nextDay = tk.Button(master = self.commit, image = img2,command = lambda:advanceNextDay(self), height = 91, width = 191)
-        nextDay = tk.Button(master = self.commit,text = 'Next Day', command = lambda:advanceNextDay(self), height = 6, width = 27)
+        nextDay = tk.Button(master = self.commit, image = img2,command = lambda:advanceNextDay(self), height = 91, width = 191)
+        self.image = img2
+        #nextDay = tk.Button(master = self.commit,text = 'Next Day', command = lambda:advanceNextDay(self), height = 6, width = 27)
         nextDay.pack()
         
     

@@ -155,5 +155,6 @@ can.create_image(100, 200, image=tkimg)
 
 
 ##Put it all together
+#menuUI = treeUI('treeDemo',['stuff'])
 root.mainloop()
     #actually runs the main pane
