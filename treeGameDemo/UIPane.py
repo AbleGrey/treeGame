@@ -16,7 +16,7 @@ def advanceNextDay(self):
         #calculate new status, new model, new display
         #clear the selections from prev day, redraw canvas
     
-class treeUI:
+class TreeUI:
     def __init__(self,title,params):
         self.root = tk.Tk()
 
@@ -94,6 +94,6 @@ class treeUI:
 #img = Image.open('TreeBranch-2.gif')
 #img2 = ImageTk.PhotoImage(img)
 
-sample = treeUI('foop',[1,2])
+#sample = treeUI('foop',[1,2])
 
-sample.root.mainloop()
+#sample.root.mainloop()

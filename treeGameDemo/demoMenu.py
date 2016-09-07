@@ -1,6 +1,6 @@
 from UIPane import *
 from brTree import *
+from environmentModels import *
 
-
-menuUI = treeUI('treeDemo',['stuff'])
-menu.root.mainloop()
+menuUI = TreeUI('treeDemo',['stuff'])
+menuUI.root.mainloop()
