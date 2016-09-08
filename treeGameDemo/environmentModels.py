@@ -1,5 +1,7 @@
 import random
 
+#for reference, see
+#http://sciencelearn.org.nz/Contexts/Soil-Farming-and-Science/Science-Ideas-and-Concepts/Soil-properties
 
 ##Weather
 #cloud cover

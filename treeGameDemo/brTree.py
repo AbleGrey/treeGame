@@ -8,7 +8,7 @@ import random
 class brTree:
     #placeholder Tree model, from fractals homework w/uniform forks/node
     #note that this tree grows upward, in the -Y direction
-    def __init__(self,branchOrigin,branchLen,depth,density):
+    def __init__(self,branchOrigin,branchLen,depth = 3,density= 3):
         #initialized with the following:
             #trunk origin coordinate, (x,y) tuple
             #trunk length, float
@@ -19,6 +19,7 @@ class brTree:
         self.depth = depth
         self.density = density
         self.updateModel()
+        self.inventory = []
                 
     def setDepth(self,newDepth):
         #adjust tree depth
