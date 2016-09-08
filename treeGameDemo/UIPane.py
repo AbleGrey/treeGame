@@ -70,8 +70,9 @@ class TreeUI:
         botArc = self.can.create_arc(5,5,245,295, start = 180,extent = 180, outline = 'green',style = tk.CHORD, fill = 'green')
         topArc = self.can.create_oval(5,5,245,295)# start = 0,extent = 180, style = tk.CHORD)#gndArc = can.create_arc(0,160,250,240,start = 20,extent = 140,style = tk.ARC)
         #trnkPH = can.create_line(125,270,125,170)
-        self.mainTree = brTree((125,150),50)
-
+        trunklength = 50
+        self.mainTree = brTree((125,150),trunklength)
+        self.rootsTree = brTree((125,150-trunklength),-trunklength)
         self.can.pack()
 
         ##Allocate Frame Contents
@@ -121,6 +122,9 @@ class TreeUI:
         branches = self.mainTree.reportCoords()
         for coords in branches:
             self.can.create_line(coords,tags='branch')
+        roots = self.rootsTree.reportCoords()
+        for coords in roots:
+            self.can.create_line(coords,tags = 'branch')
     def setPip(self,pipId, pipVal):
         self.pips[pipId] = pipVal
         for i in range(len(self.pips)):
